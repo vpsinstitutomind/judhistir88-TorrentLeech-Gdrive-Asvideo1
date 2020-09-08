@@ -89,14 +89,14 @@ def add_magnet(aria_instance, magnetic_link, c_file_name):
             options=options
         )
     except Exception as e:
-        return False, "**FAILED** \n" + str(e) + " \nPlease do not send SLOW links. Read /help"
+        return False, "**FAILED** \n" + str(e) + " \nPlease do not send 🐢 links. Read /help"
     else:
         return True, "" + download.gid + ""
 
 
 def add_torrent(aria_instance, torrent_file_path):
     if torrent_file_path is None:
-        return False, "**FAILED** \n" + str(e) + " \nsomething wrongings when trying to add <u>TORRENT</u> file"
+        return False, "**FAILED** \n" + str(e) + " \nSomething went wrong when trying to add <u>TORRENT</u> file"
     if os.path.exists(torrent_file_path):
         # Add Torrent Into Queue
         try:
@@ -107,11 +107,11 @@ def add_torrent(aria_instance, torrent_file_path):
                 position=None
             )
         except Exception as e:
-            return False, "**FAILED** \n" + str(e) + " \nPlease do not send SLOW links. Read /help"
+            return False, "**FAILED** \n" + str(e) + " \nPlease do not send 🐢 links. Read /help"
         else:
             return True, "" + download.gid + ""
     else:
-        return False, "**FAILED** \nPlease try other sources to get workable link"
+        return False, "**FAILED** \nPlease try other sources to get working ink"
 
 
 def add_url(aria_instance, text_url, c_file_name):
@@ -128,7 +128,7 @@ def add_url(aria_instance, text_url, c_file_name):
             options=options
         )
     except Exception as e:
-        return False, "**FAILED** \n" + str(e) + " \nPlease do not send SLOW links. Read /help"
+        return False, "**FAILED** \n" + str(e) + " \nPlease do not send 🐢 links. Read /help"
     else:
         return True, "" + download.gid + ""
 
@@ -493,7 +493,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
         file.remove(force=True)
         await event.edit(
             "Download Auto Canceled :\n\n"
-            "Your Torrent/Link is Dead.".format(
+            "Your Torrent/Link is 💀.".format(
                 file.name
             )
         )
@@ -501,7 +501,7 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
     except Exception as e:
         LOGGER.info(str(e))
         if " not found" in str(e) or "'file'" in str(e):
-            await event.edit("Download Canceled :\n<code>{}</code>".format(file.name))
+            await event.edit("✅ Download Canceled :\n<code>{}</code>".format(file.name))
             return False
         else:
             LOGGER.info(str(e))

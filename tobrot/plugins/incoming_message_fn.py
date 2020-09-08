@@ -34,7 +34,7 @@ from tobrot.helper_funcs.cloneHelper import CloneHelper
 
 async def incoming_purge_message_f(client, message):
     """/purge command"""
-    i_m_sefg2 = await message.reply_text("Purging...", quote=True)
+    i_m_sefg2 = await message.reply_text("🗑️Purging...", quote=True)
     if await AdminCheck(client, message.chat.id, message.from_user.id):
         aria_i_p = await aria_start()
         # Show All Downloads
@@ -47,7 +47,7 @@ async def incoming_message_f(client, message):
     """/leech command"""
     g_id = message.from_user.id
     credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await credit.reply_text("processing", quote=True)
+    i_m_sefg = await credit.reply_text("Processing...", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -66,7 +66,7 @@ async def incoming_message_f(client, message):
     LOGGER.info(dl_url)
     LOGGER.info(cf_name)
     if dl_url is not None:
-        await i_m_sefg.edit_text("extracting links")
+        await i_m_sefg.edit_text("Extracting Links")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         LOGGER.info(aria_i_p)
@@ -80,7 +80,7 @@ async def incoming_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("trying to download")
+        await i_m_sefg.edit_text("Trying 2 Download ⬇️")
         # try to download the "link"
         sagtus, err_message = await call_apropriate_function(
             aria_i_p,
@@ -99,7 +99,7 @@ async def incoming_message_f(client, message):
             await i_m_sefg.edit_text(err_message)
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "No Slangs 🤭, What have you entered ❓ \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #
@@ -107,7 +107,7 @@ async def incoming_gdrive_message_f(client, message):
     """/gleech command"""
     g_id = message.from_user.id
     credit = await message.reply_text(f"🧲 Leeching for you <a href='tg://user?id={g_id}'>🤕</a>", parse_mode="html")
-    i_m_sefg = await credit.reply_text("processing", quote=True)
+    i_m_sefg = await credit.reply_text("Processing...", quote=True)
     is_zip = False
     is_unzip = False
     is_unrar = False
@@ -126,7 +126,7 @@ async def incoming_gdrive_message_f(client, message):
     LOGGER.info(dl_url)
     LOGGER.info(cf_name)
     if dl_url is not None:
-        await i_m_sefg.edit_text("extracting links")
+        await i_m_sefg.edit_text("Extracting Links")
         # start the aria2c daemon
         aria_i_p = await aria_start()
         LOGGER.info(aria_i_p)
@@ -140,7 +140,7 @@ async def incoming_gdrive_message_f(client, message):
         # create download directory, if not exist
         if not os.path.isdir(new_download_location):
             os.makedirs(new_download_location)
-        await i_m_sefg.edit_text("trying to download")
+        await i_m_sefg.edit_text("Trying 2 Download")
         # try to download the "link"
         await call_apropriate_function_g(
             aria_i_p,
@@ -156,7 +156,7 @@ async def incoming_gdrive_message_f(client, message):
         )
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "No Slang 🤭. What have you entered ❓.\nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 
@@ -178,7 +178,7 @@ async def incoming_youtube_dl_f(client, message):
                 #gg.write("I am noob and don't know what to do that's why I have did this")
     LOGGER.info(cf_name)
     if dl_url is not None:
-        await i_m_sefg.edit_text("extracting links")
+        await i_m_sefg.edit_text("Extracting Links")
         current_user_id = message.from_user.id
         # create an unique directory
         user_working_dir = os.path.join(DOWNLOAD_LOCATION, str(current_user_id))
@@ -213,7 +213,7 @@ async def incoming_youtube_dl_f(client, message):
             )
     else:
         await i_m_sefg.edit_text(
-            "**FCUK**! wat have you entered. \nPlease read /help \n"
+            "No Slang 🤭, What have you entered ❓ \nPlease read /help \n"
             f"<b>API Error</b>: {cf_name}"
         )
 #playlist
@@ -226,11 +226,11 @@ async def g_yt_playlist(client, message):
         if message.command[1] == "gdrive":
             G_DRIVE = True
     if 'youtube.com/playlist' in message.reply_to_message.text:
-        i_m_sefg = await message.reply_text("Downloading...you should wait🤗", quote=True)
+        i_m_sefg = await message.reply_text("Downloading...U Should Wait ✋", quote=True)
         await yt_playlist_downg(message.reply_to_message, i_m_sefg, G_DRIVE)
     
     else:
-        await message.reply_text("Reply to youtube playlist link only 🙄")
+        await message.reply_text("Reply To YouTube playlist link only 🙄")
         
  #
 async def g_clonee(client, message):

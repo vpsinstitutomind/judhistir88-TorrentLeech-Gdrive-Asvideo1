@@ -79,7 +79,7 @@ async def upload_to_tg(
         new_m_esg = message
         if not message.photo:
             new_m_esg = await message.reply_text(
-                f"Found {len(directory_contents)} files <a href='tg://user?id={from_user}'>🤒</a>",
+                f"Found {len(directory_contents)} 📂s <a href='tg://user?id={from_user}'>🤒</a>",
                 quote=True
                 # reply_to_message_id=message.message_id
             )
@@ -97,9 +97,9 @@ async def upload_to_tg(
             LOGGER.info("TODO")
             d_f_s = humanbytes(os.path.getsize(local_file_name))
             i_m_s_g = await message.reply_text(
-                "Telegram does not support uploading this file.\n"
+                "Telegram doesn't support Uploading⬆️ this 📂.\n"
                 f"Detected File Size: {d_f_s} 😡\n"
-                "\n🤖 trying to split the files 🌝🌝🌚"
+                "\n🤖 Is Trying To ✂️ The Files"
             )
             splitted_dir = await split_large_files(local_file_name)
             totlaa_sleif = os.listdir(splitted_dir)
@@ -109,8 +109,8 @@ async def upload_to_tg(
             ba_se_file_name = os.path.basename(local_file_name)
             await i_m_s_g.edit_text(
                 f"Detected File Size: {d_f_s} 😡\n"
-                f"<code>{ba_se_file_name}</code> splitted into {number_of_files} files.\n"
-                "trying to upload to Telegram, now ..."
+                f"<code>{ba_se_file_name}</code> splitted into {number_of_files} 📂s.\n"
+                "Trying To Upload 📂s 2 Telegram, now ..."
             )
             for le_file in totlaa_sleif:
                 # recursion: will this FAIL somewhere?
@@ -280,7 +280,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                 message_for_progress_display = await message.reply_text(
                     "starting upload of {}".format(os.path.basename(local_file_name))
                 )
-            if local_file_name.upper().endswith(("MKV", "MP4", "WEBM")):
+            if local_file_name.upper().endswith(("MKV", "MP4", "WEBM","AVI")):
                 metadata = extractMetadata(createParser(local_file_name))
                 duration = 0
                 if metadata.has("duration"):
@@ -351,7 +351,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "trying to upload",
+                            "Trying 2 Upload ⬆️",
                             message_for_progress_display,
                             start_time
                         )
@@ -407,7 +407,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "trying to upload",
+                            "Trying 2 Upload ⬆️",
                             message_for_progress_display,
                             start_time
                         )
@@ -449,7 +449,7 @@ async def upload_single_file(message, local_file_name, caption_str, from_user, e
                         #reply_to_message_id=message.reply_to_message.message_id,
                         progress=progress_for_pyrogram,
                         progress_args=(
-                            "trying to upload",
+                            "Trying 2 Upload ⬆️",
                             message_for_progress_display,
                             start_time
                         )

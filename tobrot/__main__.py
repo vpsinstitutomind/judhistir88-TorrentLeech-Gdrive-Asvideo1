@@ -91,7 +91,7 @@ if __name__ == "__main__" :
     #
     incoming_purge_message_handler = MessageHandler(
         incoming_purge_message_f,
-        filters=filters.command(["purge"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["purge@Leechup2bot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_purge_message_handler)
     #
@@ -109,7 +109,7 @@ if __name__ == "__main__" :
     #
     incoming_g_clear_handler = MessageHandler(
         g_clearme,
-        filters=filters.command(["renewme"]) & filters.chat(chats=AUTH_CHANNEL)
+        filters=filters.command(["renewme@Leechup2bot"]) & filters.chat(chats=AUTH_CHANNEL)
     )
     app.add_handler(incoming_g_clear_handler)
     #

@@ -81,7 +81,7 @@ async def status_message_f(client, message):
     LOGGER.info(msg)
 
     if msg == "":
-        msg = "🤷‍♂️ No Active, Queued or Paused TORRENTs"
+        msg = "❌ No Active, Queued OR Paused TORRENTs"
 
     currentTime = time.strftime("%H:%M:%S", time.gmtime(time.time() - BOT_START_TIME))   #ctrl-c & ctrl-v 😑
     total, used, free = shutil.disk_usage(".")
@@ -100,7 +100,7 @@ async def status_message_f(client, message):
 async def cancel_message_f(client, message):
     if len(message.command) > 1:
         # /cancel command
-        i_m_s_e_g = await message.reply_text("checking..?", quote=True)
+        i_m_s_e_g = await message.reply_text("Checking...🕵️", quote=True)
         aria_i_p = await aria_start()
         g_id = message.command[1].strip()
         LOGGER.info(g_id)
@@ -109,11 +109,11 @@ async def cancel_message_f(client, message):
             LOGGER.info(downloads)
             LOGGER.info(downloads.remove(force=True))
             await i_m_s_e_g.edit_text(
-                "Leech Cancelled"
+                "✅ Leech Cancelled"
             )
         except Exception as e:
             await i_m_s_e_g.edit_text(
-                "<i>FAILED</i>\n\n" + str(e) + "\n#error"
+                "<i>FAILED ☹️</i>\n\n" + str(e) + "\n#error"
             )
     else:
         await message.delete()
@@ -164,7 +164,7 @@ async def exec_message_f(client, message):
 
 async def upload_document_f(client, message):
     imsegd = await message.reply_text(
-        "processing ..."
+        "Processing..."
     )
     if message.from_user.id in AUTH_CHANNEL:
         if " " in message.text:

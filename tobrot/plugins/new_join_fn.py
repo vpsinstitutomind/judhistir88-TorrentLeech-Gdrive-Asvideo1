@@ -22,7 +22,7 @@ from tobrot import (
 async def new_join_f(client, message):
     chat_type = message.chat.type
     if chat_type != "private":
-        await message.reply_text(f"Current CHAT ID: <code>{message.chat.id}</code> \nNot Designed For This Group Please Check @publicleech1", disable_web_page_preview=False)
+        await message.reply_text(f"Current CHAT ID: <code>{message.chat.id}</code> \nNot Designed For This Group Please Check @publicleech1", disable_web_page_preview=True)
         # leave chat
         await client.leave_chat(
             chat_id=message.chat.id,

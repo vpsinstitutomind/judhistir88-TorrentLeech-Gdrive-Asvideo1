@@ -45,7 +45,7 @@ async def save_thumb_nail(client, message):
         os.remove(downloaded_file_name)
         await ismgs.edit(
             "✅ Custom 🎦 Or 📂's thumbnail saved. " + \
-            "This 🖼️ will be used as thumbnail in next processes, till /clearthumbnail."
+            "This 🖼️ will be used as thumbnail in next processes, till /clear."
         )
     else:
         await message.edit("Reply to a 🖼️ to save custom thumbnail")

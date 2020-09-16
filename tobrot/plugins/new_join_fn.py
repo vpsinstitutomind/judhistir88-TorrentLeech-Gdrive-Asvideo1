@@ -38,7 +38,7 @@ async def help_message_f(client, message):
     #message_id = 99
     # display the /help
     
-    await message.reply_text("Please Check Commands Below Before Using Me In This Group https://telegra.ph/Command-List-09-01", disable_web_page_preview=False)
+    await message.reply_text("Please Check Commands Below Before Using Me In This Group https://telegra.ph/Command-List-09-01", disable_web_page_preview=True)
 
 
 async def rename_message_f(client, message):

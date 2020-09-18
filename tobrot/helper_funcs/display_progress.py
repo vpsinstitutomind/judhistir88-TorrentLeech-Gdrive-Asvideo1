@@ -33,7 +33,7 @@ async def progress_for_pyrogram(
         speed = current / diff
         elapsed_time = round(diff) * 1000
         time_to_completion = round((total - current) / speed) * 1000
-        estimated_total_time = (time_to_completion - elapsed_time) + (time_to_completion + elapsed_time)
+        estimated_total_time = round(((time_to_completion - elapsed_time) + (time_to_completion + elapsed_time)) / 2)
 
         elapsed_time = TimeFormatter(milliseconds=elapsed_time)
         estimated_total_time = TimeFormatter(milliseconds=estimated_total_time)

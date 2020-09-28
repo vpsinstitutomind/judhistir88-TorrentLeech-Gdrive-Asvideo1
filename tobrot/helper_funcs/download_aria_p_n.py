@@ -227,7 +227,7 @@ async def call_apropriate_function(
             user_id,
             response
         )
-#    LOGGER.info(final_response)
+    LOGGER.info(final_response)
     try:
         message_to_send = ""
         for key_f_res_se in final_response:

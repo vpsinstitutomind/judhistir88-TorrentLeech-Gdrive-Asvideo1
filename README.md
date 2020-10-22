@@ -50,7 +50,7 @@ f)Then tap 👇👇
 
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy) #Revived
 
-Better buy a vps 😐 and follow [this](https://github.com/gautamajay52/TorrentLeech-Gdrive#process-to-run-this-bot-on-vps)
+Better buy a vps 😐 and follow [this](https://github.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive#process-to-run-this-bot-on-vps)
 
 ### The Legacy Way
 Simply clone the repository and run the main file:
@@ -128,7 +128,7 @@ and everythin except `[NAME]`
 8. Examples:-
 <p align="center">
 
-  <img src="https://raw.githubusercontent.com/gautamajay52/TorrentLeech-Gdrive/master/rclone.jpg" width="470" height="150">
+  <img src="https://raw.githubusercontent.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive/master/rclone.jpg" width="470" height="150">
 
 </p>
 
@@ -246,7 +246,7 @@ the file will be uploaded as `new.txt`.
 
 - Clone this repo:
 ```
-git clone https://github.com/gautamajay52/TorrentLeech-Gdrive torrentleech-gdrive
+git clone https://github.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive torrentleech-gdrive
 cd torrentleech-gdrive
 ```
 
@@ -287,7 +287,7 @@ sudo docker run torrentleech-gdrive
 
 
 ## Credits, and Thanks to
-* [GautamKumar(me)](https://github.com/gautamajay52/TorrentLeech-Gdrive) 😬
+* [aaumar(me)](https://github.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive) 😬
 * [SpEcHiDe](https://github.com/SpEcHiDe/PublicLeech) for his wonderful code😚
 * [Rclone Team](https://rclone.org) for theirs awesome tool☁️
 * [Dan Tès](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)

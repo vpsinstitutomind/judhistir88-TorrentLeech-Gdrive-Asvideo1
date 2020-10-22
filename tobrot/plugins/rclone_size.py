@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-# (c) gautamajay52
+# (c) gg
 
 import subprocess
 import os
@@ -37,7 +37,7 @@ async def check_size_g(client, message):
     await message.reply_text(f"🔊CloudInfo:\n\n{gautam}")
     await del_it.delete()
 
-#gautamajay52
+#d
 
 async def g_clearme(client, message):
     inline_keyboard = []

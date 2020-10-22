@@ -1,12 +1,12 @@
 {
   "name": "Boty",
-  "description": "A Telegram Torrent (and youtube-dl) Leecher based on Pyrogram. Powered by @torrentleechgdrivesupport!",
+  "description": "A Telegram  !",
   "keywords": [
     "telegram"
   ],
-  "repository": "https://github.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive-Asvideo1",
+  "repository": "https://github.com/vpsinstitutomind/ronionbot",
   "success_url": "https://t.me/",
-  "website": "https://github.com/vpsinstitutomind/judhistir88-TorrentLeech-Gdrive-Asvideo1",
+  "website": "https://github.com/vpsinstitutomind/ronionbot",
   "env": {
     "ENV": {
       "description": "Setting this to ANYTHING will enable webhooks when in env mode",
@@ -42,7 +42,7 @@
       "required": false
     },
     "ARIA_TWO_STARTED_PORT": {
-      "description": "should be an integer. The port on which aria2c daemon must start, and keep listening.",
+      "description": "should be an integer. The port on which ss daemon must start, and keep listening.",
       "value": "6800",
       "required": false
     },
@@ -52,7 +52,7 @@
       "required": false
     },
     "MAX_TIME_TO_WAIT_FOR_TORRENTS_TO_START": {
-      "description": "should be an integer. Number of seconds to wait before cancelling a torrent.",
+      "description": "should be an integer. Number of seconds to wait before cancelling as.",
       "required": false
     },
     "FINISHED_PROGRESS_STR": {
